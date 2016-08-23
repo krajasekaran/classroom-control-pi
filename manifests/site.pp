@@ -21,6 +21,14 @@
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 
+node /prajtyagi/ {
+  notify { "This is a regular expression match!": }
+}
+
+node 'prajtyagi.puppetlabs.vm' {
+  notify { "This is an exact match in site.pp": }
+}
+
 node default {
   # This is where you can declare classes for all nodes.
   # Example:
@@ -29,5 +37,5 @@ node default {
   # example code for the classroom
   include examples::puppetize
   
-  notify { "Hello world! I am $(::fqdn)": }
+  notify { "You have reached the prajtyagi environment!": }
 }
