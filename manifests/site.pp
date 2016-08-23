@@ -21,7 +21,7 @@
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 
-node 'laura.puppetlabs.vm' {
+node 'lmacchi.puppetlabs.vm' {
   notify { "This is an exact match in site.pp": }
 }
 
