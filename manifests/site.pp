@@ -21,6 +21,10 @@
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 
+node dbrandwein.puppetlabs.vm {
+  notify { "This will only be enforced on the Linux container.": }
+}
+
 node default {
   # This is where you can declare classes for all nodes.
   # Example:
@@ -29,5 +33,5 @@ node default {
   # example code for the classroom
   include examples::puppetize
   
-  notify { "This is the default message from the dbrandwein environment": }
+  notify { "Hello, ${::fqdn}, this is the dbrandwein Puppet environment": }
 }
